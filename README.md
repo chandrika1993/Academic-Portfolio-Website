@@ -19,8 +19,6 @@ This portfolio website is designed to help academics, researchers, and students 
 
 ⚡ Fast & SEO-Friendly – Optimized performance for visibility and speed.
 
-🌙 Dark Mode Support – Optional theme toggle for accessibility and style.
-
 # 🛠️ Tech Stack
 
 Frontend: HTML5, CSS3 (Tailwind / Bootstrap), TypeScript, Ionic
