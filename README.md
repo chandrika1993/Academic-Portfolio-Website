@@ -1,5 +1,5 @@
 
-# 🎓 Academic Portfolio Website
+# 🎓 Academic Portfolio Website | Angular, Ionic, Typescript, Firebase, HTML / SCSS / Tailwind, Git
 
 A responsive and modern personal website for showcasing academic achievements, research, publications, and professional experiences.
 
