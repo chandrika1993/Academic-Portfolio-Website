@@ -26,3 +26,6 @@ Frontend: HTML5, CSS3 (Tailwind / Bootstrap), TypeScript, Ionic
 Deployment: Firebase
 
 Version Control: Git
+
+#
+# Complete Code Base Available on Request ;)
