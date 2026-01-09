@@ -27,5 +27,10 @@ Deployment: Firebase
 
 Version Control: Git
 
-#
+
+# ⚡ PageSpeed Insights Statistics
+
+<img width="480" height="109" alt="Screenshot 2026-01-09 at 14 38 20" src="https://github.com/user-attachments/assets/5161e5e2-0aa7-457f-8eb4-977e5f77ada9" />
+
+
 # Complete Code Base Available on Request ;)
