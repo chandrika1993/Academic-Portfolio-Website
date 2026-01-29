@@ -21,7 +21,7 @@ This portfolio website is designed to help academics, researchers, and students 
 
 # 🛠️ Tech Stack
 
-Frontend: HTML5, CSS3 (Tailwind / Bootstrap), TypeScript, Ionic
+Frontend: HTML5, CSS3 (Tailwind / Bootstrap), TypeScript, Ionic, Angular
 
 Deployment: Firebase
 
