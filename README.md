@@ -3,7 +3,7 @@
 
 A responsive and modern personal website for showcasing academic achievements, research, publications, and professional experiences.
 
-🌐 Live URL: https://divbhardwaj.com
+🌐 Live URL: [divyanshubhardwaj.com](https://divyanshubhardwaj.com)
 
 # 📘 Overview
 
