@@ -26,6 +26,26 @@ Live Google PageSpeed Insights, mobile:
 
 ----
  
+## Screenshots
+
+### Desktop
+
+<img src="docs/screenshots/desktop-highlights.webp" alt="Highlights section of divyanshubhardwaj.com on desktop" width="1159">
+
+### Mobile
+
+The same pages on a phone, with the Ionic side menu, stacked cards and touch-sized controls.
+
+<p>
+  <img src="docs/screenshots/mobile-home.webp" alt="Home page of divyanshubhardwaj.com on a phone" width="260">
+  &nbsp;
+  <img src="docs/screenshots/mobile-highlights.webp" alt="Highlights section on a phone" width="260">
+  &nbsp;
+  <img src="docs/screenshots/mobile-interests.webp" alt="Interests and experience sections on a phone" width="260">
+</p>
+
+---
+ 
 ## Architecture at a glance
  
 ```
@@ -125,6 +145,19 @@ Puppeteer scripts check every route on desktop and mobile viewports (rendering, 
 - Google Scholar `citation_*` meta tags on every paper page.
 - Generated XML sitemap, canonical URLs, Open Graph and Twitter cards, and `llms.txt` for AI assistants.
 - Identity links (`sameAs`) to Wikidata, ORCID, DBLP, ACM and Google Scholar.
+
+### Search performance
+
+Google Search Console, web search, last 3 months (August to October 2026):
+
+| Rank for "Divyanshu Bhardwaj" | Average position | Impressions | Click-through rate | Clicks |
+|:-:|:-:|:-:|:-:|:-:|
+| **#1** | **7.3** | **642** | **5.5%** | **35** |
+
+Since launch in April 2026: 1.27k impressions, 59 clicks, average position 8.2. The site has no analytics trackers or cookies, so this data comes from Search Console only.
+
+<img src="docs/screenshots/search-console-3-months.webp" alt="Search Console chart of daily clicks and impressions, August to October 2026" width="1400">
+
 ## Features
  
 - Home, About, Publications, CV, Press, Contact, Privacy Policy and a custom 404.
