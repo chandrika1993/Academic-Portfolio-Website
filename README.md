@@ -1,12 +1,12 @@
 # Academic Portfolio Website
  
-**A production research portfolio for a security and privacy researcher at CISPA. Angular 20 and Ionic 8, prerendered to static HTML, served from Firebase Hosting behind Cloudflare.**
+**A production research portfolio for a security and privacy researcher at CISPA. Angular 22 and Ionic 9, prerendered to static HTML, served from Firebase Hosting behind Cloudflare.**
  
 **Live site:** [divyanshubhardwaj.com](https://divyanshubhardwaj.com) &nbsp;|&nbsp; **Built by:** [Chandrika Mohan](https://chandrikamohan.com), Senior Full Stack Developer
  
-![Angular](https://img.shields.io/badge/Angular-20-DD0031?logo=angular&logoColor=white)
-![Ionic](https://img.shields.io/badge/Ionic-8-3880FF?logo=ionic&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-22-DD0031?logo=angular&logoColor=white)
+![Ionic](https://img.shields.io/badge/Ionic-9-3880FF?logo=ionic&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-Hosting-FFCA28?logo=firebase&logoColor=black)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-CDN-F38020?logo=cloudflare&logoColor=white)
 ![Puppeteer](https://img.shields.io/badge/Puppeteer-Prerendering-40B5A4?logo=puppeteer&logoColor=white)
@@ -15,13 +15,17 @@
  
 ## Results
  
-Live Google PageSpeed Insights, mobile:
+Live Google PageSpeed Insights, 11 November 2026:
  
-| Performance | Accessibility | Best Practices | SEO |
-|:-:|:-:|:-:|:-:|
-| **87 to 98** | **100** | **100** | **100** |
+| Page | Mobile performance | Mobile LCP | Desktop performance | Accessibility | Best Practices | SEO |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|
+| Home | **92** | 2.1 s | **98** | 100 | 100 | 100 |
+| Paper page (smartphone theft) | **92** | 2.6 s | **99** | 100 | 100 | 100 |
+| Publications | **90** | 2.8 s | **96** | 100 | 100 | 100 |
  
-<img width="1402" height="736" alt="Google PageSpeed Insights results for divyanshubhardwaj.com" src="https://github.com/user-attachments/assets/50ee713b-ffd5-40ee-b867-aeb71a43d397" />
+Importing Ionic 9 per component cut the initial bundle from 1.60 MB to 734 kB (292 kB to 201 kB transferred). After that and the Angular 22 upgrade, the home page's main content loads in 2.1 s on mobile, under Google's 2.5 s threshold (previously about 3.5 s).
+ 
+<img src="docs/screenshots/pagespeed-mobile.webp" alt="Google PageSpeed Insights mobile results for divyanshubhardwaj.com: Performance 92, Accessibility 100, Best Practices 100, SEO 100" width="900">
 ----
  
 ## Screenshots
@@ -48,7 +52,7 @@ The same pages on a phone, with the Ionic side menu, stacked cards and touch-siz
 Typed content constants (papers, CV, press, service)
         |
         v
-Angular 20 standalone app  ->  lazy routes, signals, @defer blocks
+Angular 22 standalone app  ->  lazy routes, signals, @defer blocks
         |
         v
 Production build (size budgets enforced)
@@ -70,8 +74,8 @@ Cloudflare CDN  ->  browsers, search engines, AI crawlers
 Each decision below lists what was chosen and why.
  
 ### 1. Standalone components, no NgModules
-The app bootstraps with `bootstrapApplication` and provider functions (`provideRouter`, `provideIonicAngular`). Every page and component is standalone and imports only what it uses, including individual Ionic components from `@ionic/angular/standalone`.
-**Why:** Smaller bundles through better tree shaking, no shared module bloat, and each file declares its own dependencies.
+The app bootstraps with `bootstrapApplication` and provider functions (`provideRouter`, `provideIonicAngular`). Every page and component is standalone and imports only what it uses, including each Ionic component from its own entry point (`@ionic/angular/ion-button` and so on, new in Ionic 9).
+**Why:** Smaller bundles through better tree shaking, no shared module bloat, and each file declares its own dependencies. Importing Ionic per component means only the 29 components the site uses are bundled instead of all 89.
  
 ### 2. Ionic for the UI shell, Angular for everything else
 Ionic provides the app shell, side menu, router outlet and Material Design mode. Icons are registered once at bootstrap with `addIcons`, so only the icons actually used are shipped.
@@ -94,7 +98,7 @@ UI state such as menu open state, active navigation fragment and footer visibili
 **Why:** Fine grained reactivity without a state library. The app is small enough that a store like NgRx would be pure overhead.
  
 ### 7. OnPush change detection and modern control flow
-Components use `ChangeDetectionStrategy.OnPush` and the built in `@if` / `@for` control flow with `track` expressions.
+Components use `ChangeDetectionStrategy.OnPush` (the default since Angular 22) and the built in `@if` / `@for` control flow with `track` expressions. Only the app shell opts into eager change detection, because its navigation highlight reads router state outside signals.
 **Why:** Fewer change detection cycles and stable DOM updates for lists.
  
 ### 8. Deferred loading inside pages
@@ -168,7 +172,7 @@ Since the first Search Console data on 14 April 2026: 1.34k impressions, 60 clic
 ## Features
  
 - Home, About, Publications, CV, Press, Contact, Privacy Policy and a custom 404.
-- Six research paper pages (ACM CHI and USENIX Security) with plain language summaries, key findings, one click BibTeX copy, DOI links and related papers with award recognition.
+- Eight research paper pages (ACM CHI, USENIX Security and ACNS) with plain language summaries, key findings, one click BibTeX copy, DOI links and related papers with award recognition.
 - Author list highlighting with equal contribution markers through a custom pipe.
 - Contact form through EmailJS, so no mail server is needed.
 - Accessible by default: one `h1` per page, logical headings, alt text and WCAG AA contrast.
@@ -176,12 +180,12 @@ Since the first Search Console data on 14 April 2026: 1.34k impressions, 60 clic
  
 | Area | Tools |
 |---|---|
-| Framework | Angular 20 (standalone, signals, `@defer`), Ionic 8 |
-| Language | TypeScript 5.9, SCSS, HTML |
+| Framework | Angular 22 (standalone, signals, `@defer`), Ionic 9 |
+| Language | TypeScript 6.0, SCSS, HTML |
 | Rendering | Puppeteer build time prerendering |
 | Hosting and delivery | Firebase Hosting, Firebase Storage, Cloudflare |
 | Integrations | EmailJS |
-| Quality | ESLint, Angular ESLint, Lighthouse, Puppeteer checks |
+| Quality | ESLint 10, Angular ESLint, Lighthouse, Puppeteer checks |
  
 ---
  
@@ -196,3 +200,4 @@ I am **Chandrika Mohan**, a Senior Full Stack Developer working with Angular, Io
 - Portfolio: [chandrikamohan.com](https://chandrikamohan.com)
 - LinkedIn: [linkedin.com/in/chandrikamohan](https://www.linkedin.com/in/chandrikamohan)
 - GitHub: [github.com/chandrika1993](https://github.com/chandrika1993)
+ 
