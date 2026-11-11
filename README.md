@@ -169,6 +169,7 @@ The paper pages already rank on the first page of Google:
 Since the first Search Console data on 14 April 2026: 1.34k impressions, 60 clicks, 4.5% click-through rate, average position 8.3. The site has no analytics trackers or cookies, so this data comes from Search Console only.
  
 <img src="docs/screenshots/search-console-3-months.webp" alt="Search Console chart of daily clicks and impressions, 10 August to 9 November 2026" width="1400">
+
 ## Features
  
 - Home, About, Publications, CV, Press, Contact, Privacy Policy and a custom 404.
@@ -176,6 +177,7 @@ Since the first Search Console data on 14 April 2026: 1.34k impressions, 60 clic
 - Author list highlighting with equal contribution markers through a custom pipe.
 - Contact form through EmailJS, so no mail server is needed.
 - Accessible by default: one `h1` per page, logical headings, alt text and WCAG AA contrast.
+  
 ## Tech stack
  
 | Area | Tools |
