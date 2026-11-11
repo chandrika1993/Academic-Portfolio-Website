@@ -34,6 +34,7 @@ Importing Ionic 9 per component cut the initial bundle from 1.60 MB to 734 kB (2
 ### Desktop
  
 <img src="docs/screenshots/desktop-highlights.webp" alt="Highlights section of divyanshubhardwaj.com on desktop" width="1159">
+
 ### Mobile
  
 The same pages on a phone, with the Ionic side menu, stacked cards and touch-sized controls.
@@ -147,6 +148,7 @@ Puppeteer scripts check every route on desktop and mobile viewports (rendering, 
 - Google Scholar `citation_*` meta tags on every paper page.
 - Generated XML sitemap, canonical URLs, Open Graph and Twitter cards, and `llms.txt` for AI assistants.
 - Identity links (`sameAs`) to Wikidata, ORCID, DBLP, ACM and Google Scholar.
+  
 ### Search performance
  
 Google Search Console, web search, last 3 months (10 August to 9 November 2026):
