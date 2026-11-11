@@ -26,6 +26,7 @@ Live Google PageSpeed Insights, 11 November 2026:
 Importing Ionic 9 per component cut the initial bundle from 1.60 MB to 734 kB (292 kB to 201 kB transferred). After that and the Angular 22 upgrade, the home page's main content loads in 2.1 s on mobile, under Google's 2.5 s threshold (previously about 3.5 s).
  
 <img src="docs/screenshots/pagespeed-mobile.webp" alt="Google PageSpeed Insights mobile results for divyanshubhardwaj.com: Performance 92, Accessibility 100, Best Practices 100, SEO 100" width="900">
+
 ----
  
 ## Screenshots
@@ -44,6 +45,7 @@ The same pages on a phone, with the Ionic side menu, stacked cards and touch-siz
   &nbsp;
   <img src="docs/screenshots/mobile-interests.webp" alt="Interests and experience sections on a phone" width="260">
 </p>
+
 ---
  
 ## Architecture at a glance
@@ -66,7 +68,7 @@ Firebase Hosting (clean URLs, security headers, cache rules)
         v
 Cloudflare CDN  ->  browsers, search engines, AI crawlers
 ```
- 
+
 ---
  
 ## Architectural decisions
