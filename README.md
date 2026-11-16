@@ -26,7 +26,6 @@ Live Google PageSpeed Insights, 11 November 2026:
 Importing Ionic 9 per component cut the initial bundle from 1.60 MB to 734 kB (292 kB to 201 kB transferred). After that and the Angular 22 upgrade, the home page's main content loads in 2.1 s on mobile, under Google's 2.5 s threshold (previously about 3.5 s).
  
 <img src="docs/screenshots/pagespeed-mobile.webp" alt="Google PageSpeed Insights mobile results for divyanshubhardwaj.com: Performance 92, Accessibility 100, Best Practices 100, SEO 100" width="900">
-
 ----
  
 ## Screenshots
@@ -34,7 +33,6 @@ Importing Ionic 9 per component cut the initial bundle from 1.60 MB to 734 kB (2
 ### Desktop
  
 <img src="docs/screenshots/desktop-highlights.webp" alt="Highlights section of divyanshubhardwaj.com on desktop" width="1159">
-
 ### Mobile
  
 The same pages on a phone, with the Ionic side menu, stacked cards and touch-sized controls.
@@ -46,7 +44,6 @@ The same pages on a phone, with the Ionic side menu, stacked cards and touch-siz
   &nbsp;
   <img src="docs/screenshots/mobile-interests.webp" alt="Interests and experience sections on a phone" width="260">
 </p>
-
 ---
  
 ## Architecture at a glance
@@ -69,7 +66,7 @@ Firebase Hosting (clean URLs, security headers, cache rules)
         v
 Cloudflare CDN  ->  browsers, search engines, AI crawlers
 ```
-
+ 
 ---
  
 ## Architectural decisions
@@ -148,7 +145,6 @@ Puppeteer scripts check every route on desktop and mobile viewports (rendering, 
 - Google Scholar `citation_*` meta tags on every paper page.
 - Generated XML sitemap, canonical URLs, Open Graph and Twitter cards, and `llms.txt` for AI assistants.
 - Identity links (`sameAs`) to Wikidata, ORCID, DBLP, ACM and Google Scholar.
-  
 ### Search performance
  
 Google Search Console, web search, last 3 months (10 August to 9 November 2026):
@@ -173,7 +169,6 @@ The paper pages already rank on the first page of Google:
 Since the first Search Console data on 14 April 2026: 1.34k impressions, 60 clicks, 4.5% click-through rate, average position 8.3. The site has no analytics trackers or cookies, so this data comes from Search Console only.
  
 <img src="docs/screenshots/search-console-3-months.webp" alt="Search Console chart of daily clicks and impressions, 10 August to 9 November 2026" width="1400">
-
 ## Features
  
 - Home, About, Publications, CV, Press, Contact, Privacy Policy and a custom 404.
@@ -181,7 +176,6 @@ Since the first Search Console data on 14 April 2026: 1.34k impressions, 60 clic
 - Author list highlighting with equal contribution markers through a custom pipe.
 - Contact form through EmailJS, so no mail server is needed.
 - Accessible by default: one `h1` per page, logical headings, alt text and WCAG AA contrast.
-  
 ## Tech stack
  
 | Area | Tools |
@@ -206,4 +200,5 @@ I am **Chandrika Mohan**, a Senior Full Stack Developer working with Angular, Io
 - Portfolio: [chandrikamohan.com](https://chandrikamohan.com)
 - LinkedIn: [linkedin.com/in/chandrikamohan](https://www.linkedin.com/in/chandrikamohan)
 - GitHub: [github.com/chandrika1993](https://github.com/chandrika1993)
+ 
  
